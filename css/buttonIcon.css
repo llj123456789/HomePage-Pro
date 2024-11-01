@@ -1,0 +1,194 @@
+body {
+  height: 100vh; /* 设置body的高度为视口高度 */
+  margin: 0; /* 移除默认的边距 */
+  display: flex; /* 设置body为弹性布局 */
+  justify-content: center; /* 水平居中 */
+  align-items: flex-end; /* 垂直对齐底部 */
+  background-color: transparent; /* 设置背景颜色 */
+  cursor: url('../image/cur.ico'),auto;
+}
+
+.header {
+  position: absolute; /* 设置为绝对定位 */
+  top: 15vh; /* 定位到视口顶部 */
+  right: 0vw; /* 定位到视口左侧 */
+  width: 4vw; /* 宽度为图标大小 */
+  height: 4vw; /* 高度为图标大小 */
+  background-color: transparent; /* 设置背景颜色 */
+  color: #fff; /* 设置文字颜色为白色 */
+  display: flex; /* 设置为弹性布局 */
+  justify-content: center; /* 水平居中 */
+  align-items: center; /* 垂直居中 */
+  cursor: url('../image/pointer.ico'),auto; /* 鼠标悬停时显示手型 */
+}
+
+
+.header img {
+  width: 4vw; /* 设置图标宽度 */
+  height: 4vw; /* 设置图标高度 */
+}
+
+.header a {
+  text-decoration: none; /* 移除下划线 */
+  color: #fff; /* 设置超链接文字颜色为白色 */
+}
+
+.header2 {
+    position: absolute; /* 设置为绝对定位 */
+    top: 25vh; /* 定位到视口顶部 */
+    right: 0vw; /* 定位到视口左侧 */
+    width: 4vw; /* 宽度为图标大小 */
+    height: 4vw; /* 高度为图标大小 */
+    background-color: transparent; /* 设置背景颜色 */
+    color: #fff; /* 设置文字颜色为白色 */
+    display: flex; /* 设置为弹性布局 */
+    justify-content: center; /* 水平居中 */
+    align-items: center; /* 垂直居中 */
+    cursor: url('../image/pointer.ico'),auto; /* 鼠标悬停时显示手型 */
+  }
+  
+  
+  .header2 img {
+    width: 4vw; /* 设置图标宽度 */
+    height: 4vw; /* 设置图标高度 */
+  }
+  
+  .header2 a {
+    text-decoration: none; /* 移除下划线 */
+    color: #fff; /* 设置超链接文字颜色为白色 */
+  }
+
+  .header3 {
+    position: absolute; /* 设置为绝对定位 */
+    top: 24vh; /* 定位到视口顶部 */
+    right: 10vw; /* 定位到视口you侧 */
+    width: 25vw; /* 宽度为图标大小 */
+    height: 20vw; /* 高度为图标大小 */
+    background-color: transparent; /* 设置背景颜色 */
+    color: #fff; /* 设置文字颜色为白色 */
+    display: flex; /* 设置为弹性布局 */
+    justify-content: center; /* 水平居中 */
+    align-items: center; /* 垂直居中 */
+    
+  }
+  
+  
+  .header3 img {
+    width: 25vw; /* 设置图标宽度 */
+    height: 20vw; /* 设置图标高度 */
+  }
+  
+  .header3 a {
+    text-decoration: none; /* 移除下划线 */
+    color: #fff; /* 设置超链接文字颜色为白色 */
+  }
+  
+  
+
+
+.footer {
+position: absolute; /* 设置为绝对定位 */
+bottom: 0; /* 定位到视口底部 */
+width: 100%; /* 宽度覆盖整个视口 */
+background-color: rgba(0, 0, 0, 0.5); /* 设置半透明黑色背景 */
+color: #ffffff; /* 设置文字颜色为白色 */
+padding: 10px; /* 设置内边距 */
+text-align: center; /* 水平居中文字 */
+text-decoration: none;/* 移除下划线 */
+font-size: 10px;
+}
+
+.footer a {
+margin: 0; /* 移除默认的段落边距 */
+}
+
+.rotate { /*旋转*/
+    transition: transform 1s ease-in-out;
+  }
+  
+.rotate:hover {
+transform: rotate(360deg);
+}
+
+
+.ripple-container {  /*涟漪*/
+    position: relative;
+    overflow: hidden;
+    width: 30vw;
+    height: 30vw;
+  }
+  
+  .ripple-container img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .ripple {
+    position: absolute;
+    width: 30vw;
+    height: 30vw;
+    background: radial-gradient(circle at center, rgb(247, 1, 1), rgba(3, 116, 3, 0.379), rgba(0, 0, 235, 0.967));
+    border-radius: 50%;
+    animation: ripple 1s infinite;
+  }
+  
+  @keyframes ripple {
+    0% {
+      transform: scale(0);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(2);
+      opacity: 0;
+    }
+  }
+
+
+  #character { /*交互*/
+    position: absolute; /* 设置为绝对定位 */
+    top: calc(50vh - 10vw); /* 定位到视口顶部 */
+    right: calc(50vw - 10vw); /* 定位到视口you侧 */
+    width: 20vw; /* 宽度为图标大小 */
+    height: 20vw; /* 高度为图标大小 */
+    background-color: transparent; /* 设置背景颜色 */
+    color: #fff; /* 设置文字颜色为白色 */
+    display: flex; /* 设置为弹性布局 */
+    justify-content: center; /* 水平居中 */
+    align-items: center; /* 垂直居中 */
+    cursor: url('../image/pointer.ico'),auto; /* 鼠标悬停时显示手型 */
+    background-image: url('https://q.qlogo.cn/headimg_dl?dst_uin=2041584846&spec=640&img_type=jpg'); /* 替换为你的图片路径 */
+    background-size: cover;
+    border: 5px solid rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.7);
+    border-radius: 1000px;
+    position: fixed;
+  }
+
+
+  #dialogue {
+    position: fixed;
+    bottom: 60vh;
+    right: 60vw;
+    font-size: 15px;
+    font-weight:bold;
+    border-radius: 100px; /* 设置边框圆角 */
+    background-color: transparent;
+    border: 1px solid #214a42;
+    padding: 6vh;
+    display: none;
+  }
+
+  @keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+  }

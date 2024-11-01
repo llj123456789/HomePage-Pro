@@ -1,0 +1,86 @@
+.page-frame {
+    border: 1px solid rgb(0,0,0.5); /* 边框样式 */
+    width: 80%; /* 页面宽度 */
+    height: 80%;
+    margin: 20px auto; /* 居中页面 */
+    padding: 20px; /* 内边距 */
+    background-color: rgba(0, 0, 0, 0.27);
+  }
+  
+  /* 基础样式 */
+  body {
+    font-family: Arial, sans-serif;
+  }
+  
+  /* 分类选项样式 */
+  .categories {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+    background-color: transparent;
+    border-bottom: 2px solid #ddd;
+    border-radius: 50px;
+  }
+  
+  .categories li {
+    padding: 0px 0px;
+    border-radius: 15px;
+    font-weight: bold;
+    cursor: url('../image/pointer.ico'),auto;
+    color: white;
+    transition: background-color 0.3s;
+  }
+  
+  .categories li.active {
+    background-color: transparent;
+    color: black;
+    font-size: larger;
+    font-weight: bolder;
+  }
+  
+  .options-container {
+    display: flex; /* 使用flex布局 */
+    flex-wrap: wrap; /* 允许换行 */
+    padding: 20px;
+  }
+
+  /* 选项内容样式 */
+  .options {
+    display: none;
+    padding: 10px;
+    color: white;
+    transition: opacity 0.5s;
+  }
+  
+  .options.active {
+    display:flex;
+    opacity: 1;
+  }
+  
+  /* 选项框样式 */
+  .option {
+    padding: 10px;
+    width: 10vw;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    background-color: #2e2a2a48;
+    border: 4px solid #dddddde1;
+    cursor: url('../image/pointer.ico'),auto;
+    transition: transform 0.3s;
+    flex: 0 1 auto;
+    max-width: 200px;
+  }
+  
+  .option:hover {
+    transform: scale(1.05);
+  }
+
+  .move-down{
+    margin-top: 50px;
+  }
+  .move-down-more{
+    margin-top: 100px;
+  }
+

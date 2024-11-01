@@ -1,0 +1,277 @@
+<!DOCTYPE html >
+<html lang="zh-CN" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Aboy个人网站导航</title>
+<meta charset="UTF-8">
+<style>@import url('./css/dropRain.css'); </style>
+<style>@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');</style>
+<style>@import url('./css/buttonIcon.css');</style>
+<style>@import url('./css/dialog.css');</style>
+<style>@import url('./css/styles.css');</style>
+<style>@import url('./css/nextPage.css');</style>
+<style>@import url('./css/curClicked.css');</style>
+<link rel="stylesheet" type="text/css" href="./css/live2d.css"/>
+<link rel="stylesheet" type="text/css" href="./css/waifu.css"/>
+<link rel="stylesheet" type="text/css" href="./css/flat-ui.min.css"/>
+<script src="./js/public/jquery.min.js"></script>
+
+<link rel="icon" type="image/x-icon" href="./image/favicon.ico"/>
+
+<style>  /*内部换页*/
+    
+    .page {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      transition: transform 0.5s ease-in-out;
+      z-index: 1; /* 默认所有页面都在最下面 */
+    }
+    #page1 {
+      z-index: 2; /* 初始页面在最上层 */
+    }
+    #page2 {
+      transform: translateY(100%); /* 默认隐藏在下方 */
+    }
+  </style>
+</head>
+
+<body >
+    
+    
+
+       <!-- 弹窗内容
+<div id="myModal" class="modal" style=" z-index: 4">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <p>网站雏形仍然在建设中</p>
+      <p>可以试试到处点点哦！</p>
+      <p>有事请联系qq2041584846</p>
+      <p>点击任意处关闭</p><br>
+    </div>
+</div>
+-->
+
+
+<div id="page1" class="page">
+
+  <div id="info-box">
+    <p id="geo-info"></p>
+    <p id="ip-info"></p>
+    <p id="browser-info"></p>
+    <p id="latency-info"></p>
+    <p id="fps-info"></p>
+    <p id="os-info"></p>
+    <p id="user-status"></p>
+   <!-- <p id="announcement">欢迎拜访</p>-->
+</div>
+<strong><div id="info-bottom-right"></div></strong>
+
+
+  <div class="dock">
+    <img src="./image/blog.png" alt="App 1" onclick="openWindow('http://blog.scustu.cn')">
+    <img src="./image/edu.png" alt="App 2" onclick="openWindow('https://edu.scustu.cn')">
+    <img src="./image/share.png" alt="App 2" onclick="openWindow('https://edu.scustu.cn')">
+    <img src="./image/help.png" alt="App 3" onclick="openWindow('http://help.scustu.cn')">
+    <img src="./image/about.png" alt="App 3" onclick="openWindow('http://www.scustu.cn/about.html')">
+    <img src="./image/api.png" alt="App 5" onclick="openWindow('http://api.scustu.cn')">
+</div>
+
+<div class="window" id="window">
+    <div class="close-btn" onclick="closeWindow()">X</div>
+    <iframe id="window-content" src=""></iframe>
+</div>
+
+<p class="elInfo"><font color="white"><strong>网站已经安全运行：</strong></font></i><span id="htmer_time" style="color: rgb(255, 255, 255);font-weight:bolder;"></span></p>
+
+  <div class="waifu">
+    <div class="waifu-tips"></div>
+    <canvas id="live2d" width= "300" height= "400" class="live2d"></canvas>
+    <div class="waifu-tool">
+        <span class="fui-chat"></span>
+        <span class="fui-user"></span>
+        <span class="fui-cross"></span>
+    </div>
+  </div>
+
+    <p  id="random-text" class="center-text universe-text text-beautify">世界上最遥远的距离,不是生与死的距离,而是我站在你面前,你却不知道我爱你</p><br>
+    <p class="text_beautiful_font" >
+    <div id="effect-container"></div> <!--樱花-->
+    <div id="mousePosition"></div> <!--显示坐标-->
+
+
+          <video id="background-video" webkit-playsinline="true" x-webkit-airplay="true" playsinline="true" x5-video-player-type="h5" x5-video-player-fullscreen="true" x5-video-orientation="h5" preload playsInline airplay="allow" muted='muted' loop muted autoPlay>抱歉，您的浏览器不支持内嵌视频</video>
+
+
+            
+            <div id="character" class="rotate"></div>
+            <div id="dialogue">Hello!</div>
+
+            <div class="ripple" style="z-index: -1; position: absolute; top: calc(50vh - 15vw); right: calc(50vw - 15vw); transform: translate(-50%, -50%);"></div>
+            
+        <a class="footer" href="https://beian.miit.gov.cn/#/Integrated/index" target="_blank"><strong>Copyright © 2024</strong> 蜀ICP备2024088542号</a>
+    </p>
+ 
+    <div class="containerLeft">
+        <div class="borderLeft"></div>
+        <div class="text-contentLeft">
+            sponsor or give me a star?<br>
+            Nothing?<br>
+            No problem!<br>
+            @2041584846<br>
+            记录生活<br>
+            正在建设中......<br>
+            
+        </div>
+      </div>
+
+    <div class="image-container" id="imageContainer"><!--头像框-->>
+        <img src="./image/transparent.png" alt="Center Image">
+    </div>
+    <div class="rain"></div> <!--下雨效果 -->
+    
+    <p><!-- 靠下可点击图标 -->
+        <a class="header" href="https://qm.qq.com/q/PFbBw4XYGY" target="_blank">
+            <img src="./image/qq.png" alt="qq">
+        </a>
+        <a class="header3" target="_blank">
+            <img src="./image/aboy.png" alt="blog">
+        </a>
+        
+        <a class="header2" href="https://github.com/" target="_blank">
+            <img src="./image/github.png" alt="github">
+        </a>
+    </p>
+
+    <!--<button class="floating-button down-button" id="toggleBtn"></button>-->
+    <button class="floating-button-left" style="position:fixed; left:1vw; top:20vh;background-image:url('./image/left.png')"></button>
+  </div>
+
+  
+
+
+    
+  <!--
+    <div class="page-frame" id="page2">
+        <button class="floating-button-down up-button"  id="closeBtn"></button>
+        <ul class="categories move-down-more">
+          <li class="active" data-target="options1">仓库</li>
+          <li data-target="options2">项目实战</li>
+          <li data-target="options3">资料分享</li>
+          <li data-target="options6">编程学习</li>
+          <li data-target="options5">更多业务</li>
+        </ul>
+      
+        <div id="options1" class="options active options-container move-down">
+          <a href="https://github.com/llj123456789/SCUnegavator" class="option ">SCUnavigator</a>
+          <a href="https://github.com/llj123456789/Matrix" class="option">Matrix</a>
+          <a href="https://github.com/llj123456789/PushBox-pro" class="option">PushBox pro</a>
+          <a href="https://github.com/llj123456789/computer-science-stduy-reference/tree/main/game" class="option ">练手的文字游戏</a>
+          <div class="option">python爬虫</div>
+          <div class="option ">python数据分析</div>
+          <div class="option">MyFirstWeb</div>
+          <div class="option">待填</div>
+          <div class="option ">待填</div>
+          <div class="option">待填</div>
+          <div class="option ">待填</div>
+          <div class="option">待填</div>
+          <div class="option">待填</div>
+          <div class="option ">待填</div>
+          <div class="option">待填</div>
+        </div>
+      
+        <div id="options2" class="options move-down">
+          <div class="option">cpp大作业</div>
+          <div class="option">编程实战</div>
+          <div class="option">待填</div>
+          <div class="option">待填</div>
+          <div class="option">待填</div>
+          <div class="option">待填</div>
+          <div class="option">待填</div>
+          <div class="option">待填</div>
+        </div>
+      
+        <div id="options3" class="options move-down">
+          <div class="option">高数</div>
+          <div class="option">线代</div>
+          <div class="option">近代史纲要</div>
+          <div class="option">英语</div>
+          <div class="option">数字逻辑</div>
+        </div>
+
+       
+
+          <div id="options5" class="options move-down">
+            <div class="option">代码代帮</div>
+            <div class="option">项目代帮</div>
+            <div class="option">学习指导</div>
+            <div class="option">日常分享</div>
+            <div class="option">在线客服</div>
+            <div class="option">MORE</div>
+          </div>
+
+          <div id="options6" class="options move-down">
+            <a href="" class="option">c/cpp</a>
+            <div class="option">Linux</div>
+            <div class="option">python</div>
+            <div class="option">Java</div>
+            <div class="option">c#</div>
+            <div class="option">Lisp</div>
+            <div class="option">Go</div>
+            <div class="option">R</div>
+            <div class="option">HTML5+CSS+JS</div>
+            <div class="option">lua</div>
+            <div class="option">php</div>
+            <div class="option">SQL</div>
+            <div class="option">待填</div>
+
+          </div>
+    </div>
+  -->
+
+ 
+
+
+</body>
+</html>
+
+
+
+<script> //内部换页
+    var toggleBtn = document.getElementById('toggleBtn');
+    var closeBtn = document.getElementById('closeBtn');
+    var page2 = document.getElementById('page2');
+  
+    toggleBtn.addEventListener('click', function() {
+        page2.style.zIndex = '4'; // 确保滑动的页面在最上层
+      page2.style.transform = 'translateY(10%)'; // 滑动页面到3/4处
+      
+    });
+
+  
+    closeBtn.addEventListener('click', function() {
+      page2.style.transform = 'translateY(120%)';
+      page2.style.zIndex = '4'; // 将页面放回原位
+    });
+  </script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="./js/styles.js">//处理初始化文字</script>
+        <script src="./js/dialog.js"> </script>
+        <script src="./js/buttonIcon.js"> </script>
+        <script src="./js/dropRain.js"> </script>
+        <script src="./js/nextPage.js"> </script>
+        <script src="./js/curClicked.js"> </script>
+        <script src="./js/live2d.js"></script>
+    <script src="./js/waifu-tips.js"></script>
+    <script type="text/javascript">initModel("assets/")</script>
+    <style>
+#touxiang{
+width:auto;
+}
+    </style>
+        
+
+
+
+
+
+

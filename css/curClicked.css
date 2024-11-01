@@ -1,0 +1,31 @@
+#effect-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* 防止容器遮挡鼠标事件 */
+    overflow: hidden;
+  }
+  
+  .effect-item {
+
+    position: absolute;
+    width: 50px; /* 根据图案大小调整 */
+    height: 50px; /* 根据图案大小调整 */
+    background-size: contain;
+    background-repeat: no-repeat;
+    pointer-events: none;
+  }
+  .small-item {
+
+    position: absolute;
+    width: 10px; /* 根据图案大小调整 */
+    height: 10px; /* 根据图案大小调整 */
+    background-size: contain;
+    background-repeat: no-repeat;
+    pointer-events: none;
+  }
+
+
+  

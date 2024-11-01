@@ -1,0 +1,51 @@
+/* 弹窗样式 */
+.modal {
+    
+    display: none; /* 默认隐藏 */
+    position: fixed; /* 固定位置 */
+    z-index: 1; /* 保证弹窗位于其他元素之上 */
+    left: 0;
+    top: 0;
+    width: 100%; /* 宽度占满屏幕 */
+    height: 100%; /* 高度占满屏幕 */
+    overflow: auto; /* 如果内容溢出，则允许滚动 */
+    background-color: rgb(0,0,0); /* 背景色 */
+    background-color: rgba(0,0,0,0.4); /* 背景色，带透明度 */
+  }
+  
+  /* 弹窗内容 */
+  .modal-content {
+    border-radius: 100px;
+    padding: 30px;
+    background-image: url(../image/1.gif);
+    background-color: transparent ;
+    font-size: 14px;
+    color: white;
+    text-align: center; /* 文字居中 */
+    line-height: 5px; /* 设置行高与容器高度一致，实现垂直居中 */
+    margin: 5% auto; /* 居中显示 */
+    padding: 10px;
+    border: 1px solid #888;
+    width: 40vw; /* 宽度 */
+    height: 30vh;
+  }
+  
+  /* 关闭按钮 */
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 10vh;
+    font-weight: bold;
+  }
+  
+  .close:hover{
+    color: black;
+    text-decoration: none;
+    cursor: url('../image/pointer.ico'),auto;
+  }
+
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: url('../image/pointer.ico'),auto;
+  }
